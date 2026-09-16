@@ -26,87 +26,104 @@
         .text-maroon { color: #800000; }
         .btn-black { background-color: #1a1a1a; color: white; transition: 0.3s; }
         .btn-black:hover { background-color: #333; color: white; }
+
+        /* Ajuste exclusivo para que en celular no se vea gigante pero en PC mantenga su tamaño original */
+        @media (max-width: 991px) {
+            .hero-main-img { height: 300px !important; }
+            .hero-sub-img { height: 160px !important; }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Menú Principal Responsivo -->
+    <!-- Menú Principal (Idéntico a tu versión original de PC) -->
     <nav class="navbar navbar-expand-lg bg-white py-3 border-bottom sticky-top shadow-sm">
-        <div class="container flex-wrap flex-lg-nowrap justify-content-between align-items-center">
-            
-            <!-- Logo -->
-            <a class="navbar-brand fw-bold fs-4 text-maroon d-flex align-items-center gap-2 m-0" href="index.html">
-                <span class="text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 32px; height: 32px; font-size: 16px; background-color: #800000;">R</span>
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 text-maroon d-flex align-items-center gap-2" href="index.html">
+                <span class="text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 35px; height: 35px; font-size: 18px; background-color: #800000;">R</span>
                 Ropero Peruano
             </a>
 
-            <!-- Accesos Superiores Derecha (Carrito, Usuario, MYPES) -->
-            <div class="d-flex align-items-center gap-2 order-lg-3">
-                <!-- Carrito -->
-                <a href="checkout.html" class="text-decoration-none text-dark position-relative text-center px-1">
-                    <span class="fs-5 d-block">🛒</span>
-                    <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">0</span>
-                    <small style="font-size: 0.65rem; font-weight: 500;">Carrito</small>
-                </a>
-
-                <!-- Ingresar Cliente -->
-                <button class="btn btn-outline-dark rounded-pill px-2 py-1 d-flex align-items-center gap-1 shadow-sm" data-bs-toggle="modal" data-bs-target="#modalAuth" style="font-size: 0.8rem;">
-                    <span>👤</span> <span class="d-none d-sm-inline">Ingresar</span>
-                </button>
-
-                <!-- Área MYPES -->
-                <a href="afiliar-marca.html" class="btn btn-black rounded-pill px-2 py-1 d-flex align-items-center gap-1 shadow-sm text-decoration-none" style="font-size: 0.8rem;">
-                    <span>🏪</span> <span class="d-none d-sm-inline">MYPES</span>
-                </a>
+            <!-- Widget Categorías (Original de PC) -->
+            <div class="ms-4 me-3 d-none d-lg-flex align-items-center gap-2" style="cursor: pointer;">
+                <span class="fs-4">💧</span>
+                <div class="lh-sm">
+                    <small class="text-muted d-block" style="font-size: 0.7rem;">Buscar por</small>
+                    <strong style="font-size: 0.9rem; color: #1a1a1a;">Categorías</strong>
+                </div>
             </div>
 
-            <!-- Barra de Búsqueda (Ocupa toda la línea en celular, centrada en PC) -->
-            <form class="d-flex search-bar-bg rounded-pill p-1 w-100 mt-3 mt-lg-0 mx-lg-3 align-items-center border order-lg-2" style="max-width: 450px;" onsubmit="event.preventDefault(); window.location.href='catalogo.html';">
-                <div class="ps-3 w-100 lh-sm py-1">
-                    <input class="form-control border-0 bg-transparent shadow-none p-0" type="search" placeholder="Busca prendas, textiles o talleres..." style="font-size: 0.9rem;">
+            <!-- Barra de Búsqueda -->
+            <form class="d-flex mx-auto search-bar-bg rounded-pill p-1 w-100 w-lg-50 align-items-center border my-2 my-lg-0" onsubmit="event.preventDefault(); window.location.href='catalogo.html';">
+                <div class="ps-3 ps-lg-4 w-100 lh-sm py-1">
+                    <input class="form-control border-0 bg-transparent shadow-none p-0" type="search" placeholder="Busca prendas, textiles regionales o talleres..." style="font-size: 0.95rem;">
                 </div>
-                <button class="btn btn-light bg-white rounded-circle m-1 p-2 border d-flex align-items-center justify-content-center" type="submit" style="width: 35px; height: 35px;">🔍</button>
+                <button class="btn btn-light bg-white rounded-circle m-1 p-2 border d-flex align-items-center justify-content-center" type="submit" style="width: 40px; height: 40px;">🔍</button>
             </form>
 
+            <!-- Accesos Superiores (Carrito, Cuenta, MYPES) -->
+            <div class="d-flex align-items-center gap-2 gap-lg-3 ms-lg-4">
+                <a href="checkout.html" class="text-decoration-none text-dark position-relative text-center px-2">
+                    <span class="fs-5 d-block">🛒</span>
+                    <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">0</span>
+                    <small style="font-size: 0.7rem; font-weight: 500;">Carrito</small>
+                </a>
+
+                <button class="btn btn-outline-dark rounded-pill px-3 py-2 d-flex align-items-center gap-2 shadow-sm" data-bs-toggle="modal" data-bs-target="#modalAuth">
+                    <span>👤</span> 
+                    <div class="text-start lh-sm">
+                        <small class="d-block text-muted" style="font-size: 0.65rem;">Mi cuenta</small>
+                        <strong style="font-size: 0.8rem;">Ingresar</strong>
+                    </div>
+                </button>
+
+                <a href="afiliar-marca.html" class="btn btn-black rounded-pill px-3 py-2 d-flex align-items-center gap-2 shadow-sm text-decoration-none">
+                    <span>🏪</span> 
+                    <div class="text-start lh-sm">
+                        <small class="d-block text-white-50" style="font-size: 0.65rem;">Acceso</small>
+                        <strong style="font-size: 0.8rem;">MYPES</strong>
+                    </div>
+                </a>
+            </div>
         </div>
     </nav>
 
-    <!-- Sub Menú -->
-    <div class="bg-white border-bottom py-2 mb-4">
-        <div class="container d-flex justify-content-center gap-4 sub-nav fw-medium text-secondary py-1">
-            <span>🧶 Alpaca <span class="badge bg-danger rounded-pill ms-1">PUNO</span></span>
+    <!-- Sub Menú (Textos largos originales recuperados) -->
+    <div class="bg-white border-bottom py-2 mb-5">
+        <div class="container d-flex justify-content-center gap-5 sub-nav fw-medium text-secondary py-1">
+            <span>🧶 Ruta de la Alpaca <span class="badge bg-danger rounded-pill ms-1">PUNO</span></span>
             <span>🧵 Textiles del Sur</span>
-            <span>🌿 Sostenible</span>
-            <a href="afiliar-marca.html" class="text-decoration-none text-maroon fw-bold">🏪 Afilia tu Taller</a>
+            <span>🌿 Moda Sostenible</span>
+            <a href="afiliar-marca.html" class="text-decoration-none text-maroon fw-bold">🏪 Afilia tu taller MYPE</a>
         </div>
     </div>
 
-    <!-- Sección Principal -->
-    <div class="container mb-5 mt-4">
+    <!-- Sección Principal (Proporciones originales de PC restauradas) -->
+    <div class="container mb-5 mt-5">
         <div class="row align-items-center bg-white p-4 p-lg-5 rounded-5 shadow-sm border">
             
             <div class="col-lg-5 text-start pe-lg-5 mb-5 mb-lg-0">
                 <span class="badge bg-light text-maroon border border-danger-subtle mb-3 px-3 py-2 rounded-pill fw-medium">Hecho en Perú 🇵🇪</span>
-                <h1 class="display-5 fw-bold mb-4" style="color: #111; letter-spacing: -1px; line-height: 1.1;">
+                <h1 class="display-4 fw-bold mb-4" style="color: #111; letter-spacing: -1px; line-height: 1.1;">
                     Tu estilo,<br>nuestras raíces
                 </h1>
-                <p class="text-muted mb-4 fs-6" style="font-weight: 400; line-height: 1.6;">
-                    El puente directo entre las mejores <strong>MYPES textiles regionales</strong> y tu guardarropa. Descubre moda auténtica y sostenible sin intermediarios.
+                <p class="text-muted mb-5 fs-5" style="font-weight: 400; line-height: 1.6;">
+                    El puente directo entre las mejores <strong>MYPES textiles regionales</strong> y tu guardarropa. Descubre moda auténtica, sostenible y con identidad local sin intermediarios.
                 </p>
-                <a href="catalogo.html" class="btn btn-maroon btn-lg rounded-pill px-5 py-3 fs-6 fw-bold shadow w-100 w-sm-auto text-center">
+                <a href="catalogo.html" class="btn btn-maroon btn-lg rounded-pill px-5 py-3 fs-6 fw-bold shadow">
                     Explorar Ropero Peruano ➔
                 </a>
             </div>
 
-            <!-- Imágenes Locales -->
+            <!-- Imágenes con tamaño original de PC (500px / 240px) -->
             <div class="col-lg-7">
                 <div class="row g-3">
                     <div class="col-6">
-                        <img src="portada1.jpg" class="img-fluid hero-img w-100" style="height: 380px;" alt="Moda Peruana">
+                        <img src="portada1.jpg" class="img-fluid hero-img w-100 hero-main-img" style="height: 500px;" alt="Moda Peruana Principal">
                     </div>
                     <div class="col-6 d-flex flex-column gap-3">
-                        <img src="portada2.jpg" class="img-fluid hero-img w-100" style="height: 180px;" alt="Textil">
-                        <img src="portada3.jpg" class="img-fluid hero-img w-100" style="height: 180px;" alt="Artesanal">
+                        <img src="portada2.jpg" class="img-fluid hero-img w-100 hero-sub-img" style="height: 240px;" alt="Textil regional">
+                        <img src="portada3.jpg" class="img-fluid hero-img w-100 hero-sub-img" style="height: 240px;" alt="Prenda artesanal">
                     </div>
                 </div>
             </div>
@@ -155,7 +172,7 @@
                                 <input type="text" class="form-control" value="Ana Torres">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label small href">Correo Electrónico</label>
+                                <label class="form-label small fw-bold">Correo Electrónico</label>
                                 <input type="email" class="form-control" value="anatorres@correo.com">
                             </div>
                             <div class="mb-3">
