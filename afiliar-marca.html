@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afilia tu Taller MYPE - Ropero Peruano</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .hero-section { background-color: #1a1a1a; color: white; padding: 60px 0; text-align: center; }
+        .text-maroon { color: #800000; }
+        .btn-maroon { background-color: #800000; color: white; transition: 0.3s; }
+        .btn-maroon:hover { background-color: #5a0000; color: white; }
+        .form-box { background: white; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border: 1px solid #e5e7eb; }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg bg-white py-3 border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 text-maroon d-flex align-items-center gap-2" href="./index.html">
+                <span class="text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 35px; height: 35px; font-size: 18px; background-color: #800000;">R</span>
+                Ropero Peruano
+            </a>
+            <a href="./index.html" class="btn btn-outline-secondary rounded-3 px-4 py-2">← Volver al inicio</a>
+        </div>
+    </nav>
+
+    <!-- Cabecera impactante -->
+    <div class="hero-section mb-5">
+        <div class="container">
+            <h1 class="display-5 fw-bold mb-3">Conecta tu taller textil con todo el Perú</h1>
+            <p class="text-white-50 fs-5 mx-auto" style="max-width: 700px;">
+                Únete a <strong>Ropero Peruano</strong> y aumenta tus ventas descentralizando tus prendas regionales sin pagar comisiones abusivas ni tarifas fijas mensuales.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="container mb-5">
+        <div class="row align-items-center g-5">
+            
+            <!-- Beneficios alineados a tu investigación -->
+            <div class="col-lg-6">
+                <h3 class="fw-bold mb-4">¿Por qué afiliar tu MYPE a Ropero Peruano?</h3>
+                
+                <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="fs-3 bg-light p-3 rounded-circle border">🤝</div>
+                    <div>
+                        <h5 class="fw-bold mb-1">Sin Costos Fijos por Afiliación</h5>
+                        <p class="text-muted small mb-0">Trabajamos bajo un modelo transparente de Costo por Clic (CPC) y marketing de afiliación. Solo creces cuando vendes.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start gap-3 mb-4">
+                    <div class="fs-3 bg-light p-3 rounded-circle border">🏔️</div>
+                    <div>
+                        <h5 class="fw-bold mb-1">Visibilidad de Talleres Regionales</h5>
+                        <p class="text-muted small mb-0">Llevamos la identidad, historia y texturas de provincias (Puno, Cusco, Arequipa, Junín) directamente a compradores urbanos.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start gap-3">
+                    <div class="fs-3 bg-light p-3 rounded-circle border">📏</div>
+                    <div>
+                        <h5 class="fw-bold mb-1">Fichas Técnicas contra Devoluciones</h5>
+                        <p class="text-muted small mb-0">Estandarizamos las medidas en centímetros de tus prendas para evitar la especulación de tallas y generar confianza.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de Registro de MYPE -->
+            <div class="col-lg-6">
+                <div class="form-box p-4 p-lg-5">
+                    <h3 class="fw-bold mb-4 text-center">Solicita tu ingreso</h3>
+                    
+                    <form onsubmit="event.preventDefault(); alert('¡Solicitud enviada con éxito! Nos comunicaremos con tu taller en menos de 24 horas.'); window.location.href='./index.html';">
+                        
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold">Nombre del Taller / Empresa (Razón Social)</label>
+                            <input type="text" class="form-control" placeholder="Ej. Confecciones Alpaca Sur S.A.C." required>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label small fw-bold">RUC</label>
+                                <input type="text" class="form-control" placeholder="20000000001" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label small fw-bold">Región de Origen</label>
+                                <select class="form-select" required>
+                                    <option value="" selected disabled>Selecciona región</option>
+                                    <option value="puno">Puno</option>
+                                    <option value="cusco">Cusco</option>
+                                    <option value="arequipa">Arequipa</option>
+                                    <option value="junin">Junín</option>
+                                    <option value="lima">Lima Metropolitana</option>
+                                    <option value="otro">Otra Región</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold">Correo Electrónico o WhatsApp Corporativo</label>
+                            <input type="text" class="form-control" placeholder="contacto@tuatelier.com / +51 999 999 999" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-maroon w-100 py-3 fw-bold rounded-pill shadow-sm">
+                            Enviar Solicitud de Afiliación ➔
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

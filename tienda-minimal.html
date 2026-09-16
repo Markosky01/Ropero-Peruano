@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Basics - Ropero Peruano</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .text-maroon { color: #800000; }
+        .btn-maroon { background-color: #800000; color: white; transition: 0.3s; }
+        .btn-maroon:hover { background-color: #5a0000; color: white; }
+        .store-banner { height: 280px; object-fit: cover; width: 100%; border-radius: 12px; }
+        .product-card { transition: transform 0.2s; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; }
+        .product-card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white py-3 border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 text-maroon d-flex align-items-center gap-2" href="./index.html">
+                <span class="text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 35px; height: 35px; font-size: 18px; background-color: #800000;">R</span>
+                Ropero Peruano
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <a href="./checkout.html" class="text-decoration-none text-dark position-relative text-center px-2">
+                    <span class="fs-5 d-block">🛒</span>
+                    <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">0</span>
+                    <small style="font-size: 0.7rem; font-weight: 500;">Carrito</small>
+                </a>
+                <a href="./catalogo.html" class="btn btn-outline-secondary rounded-3 px-4 py-2">← Volver al catálogo</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="mb-4">
+            <img src="minimal_banner.jpg" class="store-banner shadow-sm" alt="Minimal Basics Banner">
+        </div>
+
+        <div class="bg-white p-4 rounded-4 shadow-sm border mb-5 d-flex justify-content-between align-items-center flex-wrap gap-3">
+            <div>
+                <h2 class="fw-bold mb-1">Minimal Basics</h2>
+                <p class="text-muted small mb-2">Taller Oficial Afiliado • Expertos en camisería y algodón Pima de exportación</p>
+                <span class="badge bg-success">Verificada por Ropero Peruano</span>
+                <span class="badge bg-light text-dark border ms-2">92% Match con identidad regional</span>
+            </div>
+            <button class="btn btn-maroon rounded-pill px-4 py-2 fw-medium" onclick="alert('¡Te has suscrito a Minimal Basics!')">❤️ Seguir Taller</button>
+        </div>
+
+        <h4 class="fw-bold mb-4">Prendas disponibles de este taller:</h4>
+        <div class="row g-4">
+            
+            <div class="col-md-6 col-xl-4">
+                <div class="card product-card h-100 bg-white">
+                    <img src="minimal_prod1.jpg" class="card-img-top" alt="Camisa Pima" style="height: 220px; object-fit: cover;">
+                    <div class="card-body p-3">
+                        <h6 class="card-title fw-bold">Camisa Clásica Slim Fit</h6>
+                        <p class="text-muted small mb-1">🌿 100% Algodón Pima peruano</p>
+                        <p class="text-success small mb-2 fw-medium">Stock: 8 unidades</p>
+                        <h5 class="fw-bold mb-3">S/ 120.00</h5>
+                        <button class="btn btn-dark w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#modalCamisa">Ver Ficha y Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xl-4">
+                <div class="card product-card h-100 bg-white">
+                    <img src="minimal_prod2.jpg" class="card-img-top" alt="Sweatshirt Pima" style="height: 220px; object-fit: cover;">
+                    <div class="card-body p-3">
+                        <h6 class="card-title fw-bold">Sweatshirt Minimal Algodón</h6>
+                        <p class="text-muted small mb-1">🌿 Algodón orgánico seleccionado</p>
+                        <p class="text-success small mb-2 fw-medium">Stock: 10 unidades</p>
+                        <h5 class="fw-bold mb-3">S/ 135.00</h5>
+                        <button class="btn btn-dark w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#modalSweatshirt">Ver Ficha y Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL 1 -->
+    <div class="modal fade" id="modalCamisa" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title fw-bold fs-4">Ficha Técnica y Comparativa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="bg-light p-3 rounded-3 mb-3">
+                                <h6 class="fw-bold text-maroon mb-2">📏 Medidas Exactas (Talla S)</h6>
+                                <table class="table table-sm table-borderless small mb-0">
+                                    <tbody>
+                                        <tr><td class="text-muted">Pecho:</td><td class="fw-medium text-end">96 cm</td></tr>
+                                        <tr><td class="text-muted">Cintura:</td><td class="fw-medium text-end">90 cm</td></tr>
+                                        <tr><td class="text-muted">Cadera:</td><td class="fw-medium text-end">94 cm</td></tr>
+                                        <tr><td class="text-muted">Largo total:</td><td class="fw-medium text-end">65 cm</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="bg-white border p-3 rounded-3 shadow-sm">
+                                <h6 class="fw-bold text-maroon mb-2">⚖️ Comparativa de Precios</h6>
+                                <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-2">
+                                    <span class="small fw-bold">Minimal Basics</span>
+                                    <span class="fw-bold text-success">S/ 120.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center text-muted small">
+                                    <span>Promedio de mercado regional</span>
+                                    <span>S/ 140.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="fw-bold mb-1">Precio: S/ 120.00</h5>
+                                <p class="small text-muted mb-3">📦 Envío interprovincial: S/ 10.00 (Incluye seguimiento).</p>
+                                <hr class="text-muted">
+                                <span class="badge bg-success mb-2">Material: 100% Algodón Pima</span>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-maroon rounded-pill py-2 fw-bold" onclick="agregarAlCarrito('Camisa Clásica Slim Fit', 120)">🛒 Agregar al Carrito</button>
+                                <button class="btn btn-dark rounded-pill py-2 fw-bold" onclick="comprarAhora('Camisa Clásica Slim Fit', 120)">Ir a Pagar (Checkout) ➔</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2 -->
+    <div class="modal fade" id="modalSweatshirt" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title fw-bold fs-4">Ficha Técnica y Comparativa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="bg-light p-3 rounded-3 mb-3">
+                                <h6 class="fw-bold text-maroon mb-2">📏 Medidas Exactas (Talla M)</h6>
+                                <table class="table table-sm table-borderless small mb-0">
+                                    <tbody>
+                                        <tr><td class="text-muted">Pecho:</td><td class="fw-medium text-end">102 cm</td></tr>
+                                        <tr><td class="text-muted">Largo total:</td><td class="fw-medium text-end">70 cm</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="bg-white border p-3 rounded-3 shadow-sm">
+                                <h6 class="fw-bold text-maroon mb-2">⚖️ Comparativa de Precios</h6>
+                                <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-2">
+                                    <span class="small fw-bold">Minimal Basics</span>
+                                    <span class="fw-bold text-success">S/ 135.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center text-muted small">
+                                    <span>Promedio de mercado regional</span>
+                                    <span>S/ 155.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="fw-bold mb-1">Precio: S/ 135.00</h5>
+                                <p class="small text-muted mb-3">📦 Envío interprovincial: S/ 10.00 (Incluye seguimiento).</p>
+                                <hr class="text-muted">
+                                <span class="badge bg-success mb-2">Material: Algodón orgánico seleccionado</span>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-maroon rounded-pill py-2 fw-bold" onclick="agregarAlCarrito('Sweatshirt Minimal Algodón', 135)">🛒 Agregar al Carrito</button>
+                                <button class="btn btn-dark rounded-pill py-2 fw-bold" onclick="comprarAhora('Sweatshirt Minimal Algodón', 135)">Ir a Pagar (Checkout) ➔</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function getCart() { return JSON.parse(localStorage.getItem('ropero_cart')) || []; }
+        function saveCart(cart) { localStorage.setItem('ropero_cart', JSON.stringify(cart)); updateCartCount(); }
+        function updateCartCount() {
+            const cart = getCart();
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            document.getElementById('cartCount').innerText = totalItems;
+        }
+        function agregarAlCarrito(name, price) {
+            let cart = getCart();
+            let found = cart.find(item => item.name === name);
+            if(found) { found.qty++; } else { cart.push({name, price, qty: 1}); }
+            saveCart(cart);
+            alert("¡" + name + " agregado al carrito con éxito!");
+        }
+        function comprarAhora(name, price) {
+            agregarAlCarrito(name, price);
+            window.location.href = "./checkout.html";
+        }
+        document.addEventListener("DOMContentLoaded", updateCartCount);
+    </script>
+</body>
+</html>
