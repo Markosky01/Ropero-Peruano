@@ -30,15 +30,16 @@
 </head>
 <body>
 
-    <!-- Menú Principal (Diseño original exacto de PC) -->
+    <!-- Menú Principal (Navbar) con Logotipo y Texto Corporativo -->
     <nav class="navbar navbar-expand-lg bg-white py-3 border-bottom sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold fs-3 text-maroon d-flex align-items-center gap-2" href="index.html">
-                <span class="text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 35px; height: 35px; font-size: 18px; background-color: #800000;">R</span>
-                Ropero Peruano
+            <!-- Logo y Texto de la Marca -->
+            <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none p-0" href="index.html">
+                <img src="icono.png" alt="Ropero Peruano" style="height: 60px; width: auto; object-fit: contain;">
+                <span class="fw-bold" style="color: #800000; font-size: 1.3rem; letter-spacing: -0.5px;">Ropero Peruano</span>
             </a>
 
-            <!-- Widget de Categorías Original -->
+            <!-- Widget de Categorías -->
             <div class="ms-4 me-3 d-none d-lg-flex align-items-center gap-2" style="cursor: pointer;">
                 <span class="fs-4">💧</span>
                 <div class="lh-sm">
@@ -47,7 +48,7 @@
                 </div>
             </div>
 
-            <!-- Barra de Búsqueda Original -->
+            <!-- Barra de Búsqueda -->
             <form class="d-flex mx-auto search-bar-bg rounded-pill p-1 w-50 align-items-center border" onsubmit="event.preventDefault(); window.location.href='catalogo.html';">
                 <div class="ps-4 w-100 lh-sm py-1">
                     <input class="form-control border-0 bg-transparent shadow-none p-0" type="search" placeholder="Busca prendas, textiles regionales o talleres..." style="font-size: 0.95rem;">
@@ -55,7 +56,7 @@
                 <button class="btn btn-light bg-white rounded-circle m-1 p-2 border d-flex align-items-center justify-content-center" type="submit" style="width: 40px; height: 40px;">🔍</button>
             </form>
 
-            <!-- Accesos Superiores Originales -->
+            <!-- Accesos Superiores -->
             <div class="d-flex align-items-center gap-2 ms-4">
                 
                 <!-- Carrito -->
@@ -65,8 +66,8 @@
                     <small style="font-size: 0.7rem; font-weight: 500;">Carrito</small>
                 </a>
 
-                <!-- Iniciar Sesión / Cuenta -->
-                <button class="btn btn-outline-dark rounded-pill px-3 py-2 d-flex align-items-center gap-2 shadow-sm ms-2" data-bs-toggle="modal" data-bs-target="#modalAuth">
+                <!-- Botón Cuenta Dinámico -->
+                <button id="btnMiCuenta" class="btn btn-outline-dark rounded-pill px-3 py-2 d-flex align-items-center gap-2 shadow-sm ms-2" data-bs-toggle="modal" data-bs-target="#modalAuth">
                     <span>👤</span> 
                     <div class="text-start lh-sm">
                         <small class="d-block text-muted" style="font-size: 0.65rem;">Mi cuenta</small>
@@ -87,17 +88,17 @@
         </div>
     </nav>
 
-    <!-- Sub Menú Original con textos completos -->
+    <!-- Sub Menú con Enlace de Afiliación y Modelo -->
     <div class="bg-white border-bottom py-2 mb-5">
         <div class="container d-flex justify-content-center gap-5 sub-nav fw-medium text-secondary py-1">
             <span>🧶 Ruta de la Alpaca <span class="badge bg-danger rounded-pill ms-1">PUNO</span></span>
             <span>🧵 Textiles del Sur</span>
             <span>🌿 Moda Sostenible</span>
-            <a href="afiliar-marca.html" class="text-decoration-none text-maroon fw-bold">🏪 Afilia tu taller MYPE</a>
+            <a href="afiliar-marca.html" class="text-decoration-none text-maroon fw-bold">🏪 Afilia tu taller MYPE (2 meses gratis)</a>
         </div>
     </div>
 
-    <!-- Sección Principal con proporciones originales -->
+    <!-- Sección Principal (Hero) -->
     <div class="container mb-5 mt-5">
         <div class="row align-items-center bg-white p-4 p-lg-5 rounded-5 shadow-sm border">
             
@@ -114,7 +115,7 @@
                 </a>
             </div>
 
-            <!-- Imágenes con tamaño original -->
+            <!-- Imágenes del Prototipo -->
             <div class="col-lg-7">
                 <div class="row g-3">
                     <div class="col-6">
@@ -129,6 +130,99 @@
 
         </div>
     </div>
+
+<!-- ======================================================= -->
+    <!-- SECCIÓN DE TRANSPARENCIA Y PICOS DE TRÁFICO (NUEVO) -->
+    <!-- ======================================================= -->
+    <div class="container my-5 py-5 border-top">
+        <div class="row align-items-center g-5">
+            <!-- Textos e Indicadores -->
+            <div class="col-lg-5">
+                <span class="badge rounded-pill px-3 py-2 mb-3 fw-medium" style="background-color: #fca5a5; color: #b91c1c;">Transparencia Total</span>
+                <h3 class="fw-bold text-dark mb-3">Confianza basada en datos reales</h3>
+                <p class="text-muted mb-4">Para garantizar la seguridad de nuestros compradores y el éxito de los talleres afiliados, mostramos públicamente el volumen de usuarios interactuando en <strong>Ropero Peruano</strong> en tiempo real.</p>
+                
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <div class="bg-light p-3 rounded-circle border shadow-sm fs-4">📈</div>
+                    <div>
+                        <h5 class="fw-bold mb-0 text-dark">+12,500</h5>
+                        <small class="text-muted">Visitas esta semana</small>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="bg-light p-3 rounded-circle border shadow-sm fs-4 position-relative">
+                        👥
+                        <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold mb-0 text-success">342 Usuarios</h5>
+                        <small class="text-muted">Navegando y comprando ahora mismo</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gráfico Interactivo (Chart.js) -->
+            <div class="col-lg-7">
+                <div class="bg-white p-4 rounded-4 shadow-lg border">
+                    <h6 class="fw-bold text-center text-dark mb-4">Picos de Tráfico de Usuarios (Últimos 7 días)</h6>
+                    <canvas id="trafficChart" height="150"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script de Chart.js (Añadir justo antes de cerrar la etiqueta </body> de tu index) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const ctx = document.getElementById('trafficChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'],
+                    datasets: [{
+                        label: 'Usuarios Activos',
+                        data: [1200, 1900, 1500, 2200, 2800, 3500, 3100], // Aquí están los picos simulados
+                        borderColor: '#800000',
+                        backgroundColor: 'rgba(128, 0, 0, 0.1)',
+                        borderWidth: 3,
+                        tension: 0.4, // Hace que la línea sea curva y moderna
+                        fill: true,
+                        pointBackgroundColor: '#800000',
+                        pointBorderColor: '#ffffff',
+                        pointRadius: 5,
+                        pointHoverRadius: 7
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: '#1a1a1a',
+                            titleFont: { size: 13 },
+                            bodyFont: { size: 14, weight: 'bold' },
+                            padding: 10,
+                            displayColors: false
+                        }
+                    },
+                    scales: {
+                        y: { 
+                            beginAtZero: true, 
+                            grid: { borderDash: [5, 5], color: '#e5e7eb' },
+                            ticks: { color: '#6b7280' }
+                        },
+                        x: { 
+                            grid: { display: false },
+                            ticks: { color: '#6b7280', font: { weight: '500' } }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 
     <!-- ======================================================= -->
     <!-- MODAL DE AUTENTICACIÓN / REGISTRO DE CLIENTES           -->
@@ -151,34 +245,34 @@
                     </ul>
 
                     <div class="tab-content" id="authContent">
-                        <!-- Iniciar Sesión -->
+                        <!-- Iniciar Sesión Dinámico -->
                         <div class="tab-pane fade show active" id="loginContent" role="tabpanel">
                             <div class="mb-3">
-                                <label class="form-label small fw-bold">Correo Electrónico</label>
-                                <input type="email" class="form-control" value="cliente@roperoperuano.pe">
+                                <label class="form-label small fw-bold">Tu Nombre o Usuario</label>
+                                <input type="text" id="loginNombre" class="form-control" placeholder="Ej. Carlos Mendoza">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label small fw-bold">Contraseña</label>
                                 <input type="password" class="form-control" value="123456">
                             </div>
-                            <button type="button" class="btn btn-maroon w-100 py-2 rounded-pill fw-bold shadow-sm" onclick="irAlCatalogo('¡Bienvenido! Sesión iniciada con éxito.')">Ingresar a mi cuenta</button>
+                            <button type="button" class="btn btn-maroon w-100 py-2 rounded-pill fw-bold shadow-sm" onclick="iniciarSesionDinamica()">Ingresar a mi cuenta</button>
                         </div>
 
                         <!-- Registrarse -->
                         <div class="tab-pane fade" id="registerContent" role="tabpanel">
                             <div class="mb-3">
                                 <label class="form-label small fw-bold">Nombre Completo</label>
-                                <input type="text" class="form-control" value="Ana Torres">
+                                <input type="text" id="regNombre" class="form-control" placeholder="Ej. Ana Torres">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label small fw-bold">Correo Electrónico</label>
-                                <input type="email" class="form-control" value="anatorres@correo.com">
+                                <input type="email" class="form-control" placeholder="correo@correo.com">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label small fw-bold">Crea una Contraseña</label>
-                                <input type="password" class="form-control" value="123456">
+                                <input type="password" class="form-control" placeholder="******">
                             </div>
-                            <button type="button" class="btn btn-maroon w-100 py-2 rounded-pill fw-bold shadow-sm" onclick="irAlCatalogo('¡Registro exitoso! Bienvenido a Ropero Peruano.')">Crear Cuenta y Comenzar</button>
+                            <button type="button" class="btn btn-maroon w-100 py-2 rounded-pill fw-bold shadow-sm" onclick="registrarUsuario()">Crear Cuenta y Comenzar</button>
                         </div>
                     </div>
                 </div>
@@ -188,16 +282,45 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        function irAlCatalogo(mensaje) {
-            alert(mensaje);
+        function registrarUsuario() {
+            const nombreInput = document.getElementById('regNombre').value.trim();
+            const nombre = nombreInput !== "" ? nombreInput : "Cliente";
+            localStorage.setItem('ropero_user', nombre);
+            
+            alert('¡Registro exitoso! Bienvenido a Ropero Peruano, ' + nombre);
+            window.location.href = "catalogo.html";
+        }
+
+        function iniciarSesionDinamica() {
+            const inputNombre = document.getElementById('loginNombre').value.trim();
+            const nombre = inputNombre !== "" ? inputNombre : "Usuario"; 
+            localStorage.setItem('ropero_user', nombre);
+            
+            alert('¡Bienvenido de nuevo, ' + nombre + '!');
             window.location.href = "catalogo.html";
         }
 
         document.addEventListener("DOMContentLoaded", function() {
+            // Actualizar carrito
             const cart = JSON.parse(localStorage.getItem('ropero_cart')) || [];
             const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
             const badge = document.getElementById('cartCount');
             if(badge) badge.innerText = totalItems;
+
+            // Mostrar el nombre del usuario logueado en la esquina superior
+            const usuarioGuardado = localStorage.getItem('ropero_user');
+            if(usuarioGuardado) {
+                const btnCuenta = document.getElementById('btnMiCuenta');
+                if(btnCuenta) {
+                    btnCuenta.innerHTML = `
+                        <span>👤</span> 
+                        <div class="text-start lh-sm">
+                            <small class="d-block text-muted" style="font-size: 0.65rem;">Hola,</small>
+                            <strong style="font-size: 0.8rem;">${usuarioGuardado}</strong>
+                        </div>
+                    `;
+                }
+            }
         });
     </script>
 </body>
